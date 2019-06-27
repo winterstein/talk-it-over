@@ -74,12 +74,11 @@ class MainDiv extends Component {
 		let msgs = Object.values(DataStore.getValue('misc', 'messages-for-user') || {});
 		return (
 			<div>
-				<NavBar currentPage={page} pages={['ms', 'spreadsheet', 'chart', 'test']} >
-					<TaskList />
+				<NavBar currentPage={page} pages={[]} >
 				</NavBar>
 				<div className="container-fluid avoid-navbar">
 					<MessageBar messages={msgs} />
-					<div id={page}>
+					<div className='container' id={page}>
 						<Page />
 					</div>
 				</div>
